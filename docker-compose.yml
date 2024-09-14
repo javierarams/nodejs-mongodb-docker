@@ -1,0 +1,39 @@
+# version: '3.1'
+
+services:
+  node-app:
+    image: server:1.0.0
+    container_name: ${SERVER_HOST}
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    env_file: .env
+    ports:
+      - '${SERVER_PORT}:${SERVER_PORT}'
+    depends_on:
+      - mongo
+    volumes:
+      - ./server:/server
+      - server-v-node-modules:/sever/node_modules
+
+  mongo:
+    image: mongo
+    container_name: ${DATABASE_HOST}
+    restart: always
+    env_file: .env
+    ports: 
+      - '${DATABASE_PORT}:${DATABASE_PORT}'
+    volumes:
+      - dbdata6:/data/db
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - '${ME_PORT}:${ME_PORT}'
+    env_file: .env
+  
+volumes:
+  server-v-node-modules:
+    name: "server-v-node-modules"
+  dbdata6:

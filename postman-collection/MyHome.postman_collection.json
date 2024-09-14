@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "0f06fced-97d3-4850-99c4-59385263deaa",
+		"name": "MyHome",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5206513"
+	},
+	"item": [
+		{
+			"name": "Properties",
+			"item": [
+				{
+					"name": "Properties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:7005/properties",
+							"host": [
+								"localhost"
+							],
+							"port": "7005",
+							"path": [
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Property",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:7005/properties",
+							"host": [
+								"localhost"
+							],
+							"port": "7005",
+							"path": [
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Properties",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Cozy Apartment in Pocitos\",\n    \"location\": {\n      \"latitude\": -34.9065,\n      \"longitude\": -56.1475\n    },\n    \"price\": 1200,\n    \"images\": [\n      \"https://images.unsplash.com/photo-1560185127-6a0575a1b536\",\n      \"https://images.unsplash.com/photo-1570129477492-45c003edd2be\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7005/properties",
+							"host": [
+								"localhost"
+							],
+							"port": "7005",
+							"path": [
+								"properties"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

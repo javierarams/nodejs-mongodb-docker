@@ -1,0 +1,48 @@
+{
+  "name": "my-home-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.js",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "Javier Aramberri",
+    "email": "javieraramberri37@gmail.com"
+  },
+  "contributors": [],
+  "scripts": {
+    "start": "nodemon .",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "@fastify/mongodb": "^8.0.0",
+    "fastify": "^4.28.1",
+    "fastify-plugin": "^4.5.1",
+    "mongodb": "^6.8.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  }
+}
